@@ -5,3 +5,13 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+possible_formats = []
+
+["VHS", "DVD", "Streaming"].each do |format|
+    possible_formats << Format.create(name: format)
+end
+
+10.times do
+    Movie.create(title: Faker::App.name, length: rand(499) + 1, format: possible_formats.sample, release_year: rand(1800..2000), rating: rand(1..5) )
+end
