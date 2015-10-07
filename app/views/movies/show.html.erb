@@ -17,7 +17,11 @@
 
 <p>
   <strong>Rating:</strong>
-  <%= @movie.rating %>
+  <%if @movie.rating == 0 %>
+    *No Rating*
+  <%else%>
+    <%= @movie.rating %>
+  <%end%>
 </p>
 
 <p>

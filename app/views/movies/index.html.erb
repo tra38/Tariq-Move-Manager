@@ -20,7 +20,13 @@
         <td><%= movie.title %></td>
         <td><%= movie.length %></td>
         <td><%= movie.release_year %></td>
-        <td><%= movie.rating %></td>
+        <td>
+          <%if movie.rating == 0%>
+            NR
+          <%else%>
+            <%= movie.rating %>
+          <%end%>
+        </td>
         <td><%= movie.format.name %></td>
         <td><%= link_to 'Show', movie %></td>
         <td><%= link_to 'Edit', edit_movie_path(movie) %></td>
