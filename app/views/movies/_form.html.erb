@@ -25,6 +25,9 @@
   </div>
   <div class="field">
     <%= f.label :rating %><br>
+    <p><%= f.label "No Rating" %>
+    <%= f.radio_button(:rating, 0) %></p>
+    <%= f.label "1-5 (5 being best)" %><br>
     <%= f.radio_button(:rating, 1) %>
     <%= f.radio_button(:rating, 2) %>
     <%= f.radio_button(:rating, 3) %>

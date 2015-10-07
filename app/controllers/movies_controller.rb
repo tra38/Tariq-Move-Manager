@@ -14,7 +14,7 @@ class MoviesController < ApplicationController
 
   # GET /movies/new
   def new
-    @movie = Movie.new
+    @movie = Movie.new(rating: 0)
   end
 
   # GET /movies/1/edit
