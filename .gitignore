@@ -32,9 +32,3 @@ config/secrets.yml
 /vendor/assets/bower_components
 *.bowerrc
 bower.json
-
-# Ignore pow environment settings
-.powenv
-
-#Ignore sample database
-.sqlite3
