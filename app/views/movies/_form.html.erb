@@ -25,7 +25,11 @@
   </div>
   <div class="field">
     <%= f.label :rating %><br>
-    <%= f.number_field :rating %>
+    <%= f.radio_button(:rating, 1) %>
+    <%= f.radio_button(:rating, 2) %>
+    <%= f.radio_button(:rating, 3) %>
+    <%= f.radio_button(:rating, 4) %>
+    <%= f.radio_button(:rating, 5) %>
   </div>
   <div class="field">
     <%= f.label :format_id %>
