@@ -4,7 +4,7 @@ class MoviesController < ApplicationController
   # GET /movies
   # GET /movies.json
   def index
-    @movies = Movie.all
+    @movies = Movie.order(sort_params)
   end
 
   # GET /movies/1
@@ -70,5 +70,9 @@ class MoviesController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def movie_params
       params.require(:movie).permit(:title, :length, :release_year, :rating, :format_id)
+    end
+
+    def sort_params
+      %w[title length release_year rating format_id].include?(params[:sort_by]) ? params[:sort_by] : "title"
     end
 end

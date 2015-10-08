@@ -5,11 +5,11 @@
 <table class="table table-hover">
   <thead>
     <tr>
-      <th>Title</th>
-      <th>Length</th>
-      <th>Year</th>
-      <th>Rating</th>
-      <th>Format</th>
+      <th><%= link_to "Title", :sort_by => "title" %></th>
+      <th><%= link_to "Length", :sort_by => "length" %></th>
+      <th><%= link_to "Year", :sort_by => "release_year" %> </th>
+      <th><%= link_to "Rating", :sort_by => "rating" %></th>
+      <th><%= link_to "Format", :sort_by => "format_id" %></th>
       <th colspan="3"></th>
     </tr>
   </thead>
