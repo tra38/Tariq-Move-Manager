@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151001205113) do
+ActiveRecord::Schema.define(version: 20151008230832) do
 
   create_table "formats", force: :cascade do |t|
     t.string   "name"
@@ -30,5 +30,14 @@ ActiveRecord::Schema.define(version: 20151001205113) do
   end
 
   add_index "movies", ["format_id"], name: "index_movies_on_format_id"
+
+  create_table "users", force: :cascade do |t|
+    t.string   "provider"
+    t.string   "uid"
+    t.string   "string"
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
 end

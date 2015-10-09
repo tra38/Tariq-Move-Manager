@@ -36,6 +36,10 @@ gem 'bootstrap-sass', '~> 3.3.5'
 #Generate fake movie data on the fly
 gem 'faker'
 
+#Create authorization system
+gem "omniauth"
+gem "omniauth-twitter"
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
